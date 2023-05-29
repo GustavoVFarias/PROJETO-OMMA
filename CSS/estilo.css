@@ -72,12 +72,14 @@ main section.receitas-principais h2{
     display: flex;
     justify-content: space-evenly; /* espaçamento igual ao redor dos elementos (horizontal) */
     align-items: flex-start; /*itens alinhados ao topo (vertical) */
+    flex-wrap: wrap; /* permite que acontea a quebra de linha */
 }
 
 .lista-receitas article{
     /* border: 1px solid #FFA000;  borda somente para teste */
     width: 345px; /* largura do article */
     text-align: center; /* centralizar tudo no article */
+    margin-bottom: 60px; /* espaçamento inferior */ 
 }
 
 
@@ -149,4 +151,20 @@ footer .container{
 
 footer p{
     padding: 0 15px;
+}
+
+/* pagina todas as receitas */
+
+main section.todas-receitas .container{
+    min-height: 600px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+main section.todas-receitas h2{
+    color: #FFA000;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: lowercase;
 }
