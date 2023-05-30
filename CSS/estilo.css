@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
     /*  garante que o elemento oculpa no maximo o espaço defenido no width */
 }
@@ -83,6 +83,7 @@ main section.banner h1 {
 main section.receitas-principais .container {
     min-height: 600px;
     width: 1200px;
+    max-width: 100%;
     /* largura */
     margin: 0 auto;
     /* espaçamento automatico para centralizar o container */
@@ -164,6 +165,7 @@ section.banner-secundario {
 section.banner-secundario .container {
     min-height: 600px;
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -183,6 +185,7 @@ section.banner-secundario .container p {
     font-size: 24px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 450px;
+    max-width: 100%;
 }
 
 footer {
@@ -194,6 +197,7 @@ footer {
 
 footer .container {
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -212,6 +216,7 @@ main section.todas-receitas .container {
     min-height: 600px;
     /* altura minima */
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 50px 0;
 }
@@ -226,6 +231,7 @@ main section.todas-receitas h2 {
 
 .container-receita-interna {
     width: 1200px;
+    max-width: 100%;
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
@@ -234,10 +240,12 @@ main section.todas-receitas h2 {
 
 .container-receita-interna main {
     width: 700px;
+    max-width: 100%;
 }
 
 .container-receita-interna main img {
     width: 100%;
+    max-width: 100%;
 }
 
 small.tag {
@@ -269,42 +277,44 @@ aside article.receita-relacionada h3 {
     text-align: center;
 }
 
-footer p{
+footer p {
     padding: 0 15px;
 }
 
 /* pagina todas as receitas */
 
-main section.todas-receitas .container{
+main section.todas-receitas .container {
     min-height: 600px;
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 50px 0;
 }
 
-main section.todas-receitas h2{
+main section.todas-receitas h2 {
     color: #FFA000;
     font-weight: bold;
     font-size: 50px;
     text-transform: lowercase;
 }
 
-.receita-interna{
+.receita-interna {
     width: 1200px;
     display: flex;
     justify-content: space-around;
 
 }
 
-main section.receita-risoto h2{ 
-    color:#FFA000;
-    text-align:left; 
-    font-weight: bold; /* grossura da letra */
-    font-size: 55px;  
+main section.receita-risoto h2 {
+    color: #FFA000;
+    text-align: left;
+    font-weight: bold;
+    /* grossura da letra */
+    font-size: 55px;
     text-transform: lowercase;
-} 
+}
 
-.tag{
+.tag {
     display: inline-block;
     border: 1px solid #176902;
     border-radius: 47px;
@@ -320,17 +330,21 @@ main section.receita-risoto h2{
     background-size: cover;
     background-position: center;
 }
+
 .banner-contato .container,
 section.contato .container {
     width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 50px 0;
     display: flex;
 }
+
 .banner-contato .container h1 {
     color: #fff;
     font-size: 70px;
 }
+
 .banner-vertical {
     width: 30%;
     height: 700px;
@@ -339,6 +353,7 @@ section.contato .container {
     background-position: center;
     border-radius: 30px;
 }
+
 .formulario {
     border: 1px solid #FFA000;
     border-radius: 20px;
@@ -346,11 +361,12 @@ section.contato .container {
     padding: 30px;
     width: 70%;
 }
+
 .formulario h2 {
     color: #FFA000;
 }
 
-.formulario form input{
+.formulario form input {
     width: 100%;
     border: 1px solid #FFA000;
     border-radius: 7px;
@@ -358,7 +374,7 @@ section.contato .container {
     margin: 5px 0;
 }
 
-.formulario form textarea{
+.formulario form textarea {
     width: 100%;
     border: 1px solid #FFA000;
     border-radius: 7px;
@@ -367,7 +383,7 @@ section.contato .container {
     height: 200px;
 }
 
-.formulario form button{
+.formulario form button {
     font-size: 16px;
     background-color: #FFA000;
     color: #FFF;
@@ -379,8 +395,77 @@ section.contato .container {
     transition: 0.5s;
 }
 
-.formulario form button:hover{
+.formulario form button:hover {
     background-color: green;
     border-color: green;
     cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    /* se o dispositivo tiver no maximo 1100px */
+
+    .container,
+    .container-receita-interna {
+        width: 900px !important;
+        max-width: 100%;
+        /* important sobrescreve outras regras */
+    }
+
+    main section.banner .container {
+        justify-content: flex-start;
+    }
+
+    .lista-receitas article {
+        width: 250px;
+    }
+
+    .container-receita-interna main {
+        width: 500px;
+    }
+
+    .container-receita-interna main iframe {
+        width: 100%;
+    }   
+}
+
+@media (max-width: 900px) {
+    .container,
+    .container-receita-interna {
+        width: 800px !important;
+        padding: 0 20px;
+    }
+
+    .lista-receitas article {
+        padding: 10px;
+    }
+}
+
+/* Teste */
+ @media (max-width: 800px){
+    .lista-receitas article{
+        width: 100% !important;
+    }
+
+    .container-receita-interna{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .container-receita-interna main{
+        width: 100%;
+    }
+
+    aside{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* teste */
+
+ @media (max-width: 375px){
+    footer .container{
+        flex-wrap: wrap;
+    }
 }
